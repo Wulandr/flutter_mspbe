@@ -6,9 +6,11 @@ import 'package:manajemenspbe/view/forum/forum.dart';
 import 'package:manajemenspbe/view/inovasi.dart';
 import 'package:manajemenspbe/view/login.dart';
 import 'package:manajemenspbe/view/more.dart';
+import 'package:manajemenspbe/view/profil.dart';
 import '../main.dart';
 import 'forum/topik.dart';
 import 'forum/forum.dart';
+import 'profil.dart';
 import 'forum/list.dart';
 import 'login2.dart';
 
@@ -18,7 +20,7 @@ class nav extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          primarySwatch: Colors.blue, backgroundColor: Colors.blue[50]),
+          primarySwatch: Colors.blue, backgroundColor: Colors.white10),
       routes: <String, WidgetBuilder>{
         '/home': (BuildContext _) => home(),
         '/forum': (BuildContext _) => Forum(),
@@ -44,17 +46,49 @@ class _MyExampleState extends State<MyExample> {
     home(),
     Forum(),
     inovasi(),
-    Text('Profil'),
-    HomePage(), //more
+    profil(),
+    // HomePage(), //more
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('MSPBE'),
+        title: Row(
+          children: [
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 5.0),
+                  child: Image.asset(
+                    'assets/image/logo.png',
+                    width: 50,
+                    height: 50,
+                    color: Colors.white,
+                  ),
+                ),
+                // Text(
+                //   'MSPBE',
+                //   style: TextStyle(color: Colors.white),
+                // ),
+              ],
+            ),
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 240),
+                  child: Icon(
+                    Icons.info_outlined,
+                    color: Colors.white,
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
+        backgroundColor: Colors.blue,
       ),
       body: Container(
-        color: Colors.blue[51],
+        color: Colors.white,
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: CustomLineIndicatorBottomNavbar(
@@ -88,10 +122,10 @@ class _MyExampleState extends State<MyExample> {
             label: 'Profil',
             icon: Icons.account_box_outlined,
           ),
-          CustomBottomBarItems(
-            label: 'More',
-            icon: Icons.list,
-          ),
+          // CustomBottomBarItems(
+          //   label: 'More',
+          //   icon: Icons.list,
+          // ),
         ],
       ),
     );

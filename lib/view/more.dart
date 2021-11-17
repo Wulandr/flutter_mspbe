@@ -12,7 +12,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List _list = [];
-  late String email, password;
 
   // Fetch content from the json file
   // Future<void> readJson() async {
@@ -50,15 +49,19 @@ class _HomePageState extends State<HomePage> {
                 return Column(
                   children: [
                     if ((_list[index]["parent"]) == 0)
-                      Row(
+                      Column(
                         children: [
-                          TextButton(
-                            child: Text(_list[index]["id"] +
-                                ". " +
-                                _list[index]["kategori"]),
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/list');
-                            },
+                          Row(
+                            children: [
+                              TextButton(
+                                child: Text(_list[index]["id"] +
+                                    ". " +
+                                    _list[index]["kategori"]),
+                                onPressed: () {
+                                  Navigator.pushNamed(context, '/list');
+                                },
+                              ),
+                            ],
                           ),
                         ],
                       ),

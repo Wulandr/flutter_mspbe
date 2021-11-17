@@ -14,13 +14,14 @@ class home extends StatelessWidget {
       body: SafeArea(
         child: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(colors: [Colors.white, Colors.white]),
+            gradient:
+                RadialGradient(colors: [Colors.blue.shade100, Colors.white10]),
           ),
           child: ListView(
             physics: BouncingScrollPhysics(),
             children: <Widget>[
               Padding(
-                  padding: EdgeInsets.only(top: 10, left: 29.8),
+                  padding: EdgeInsets.only(top: 2, left: 29.8),
                   child: Row(
                     children: [
                       // Container(
@@ -42,7 +43,7 @@ class home extends StatelessWidget {
                       //     width: 300,
                       //     child: Image.asset('assets/image/header.png'),
                       //     ),
-                      SizedBox(width: 2)
+                      SizedBox(width: 1)
                     ],
                   )
                   // Text(
@@ -54,95 +55,30 @@ class home extends StatelessWidget {
                   //   ),
                   // ),
                   ),
-              Container(
-                margin: EdgeInsets.only(left: 28.8, right: 28.8),
-                child: Row(
-                  children: <Widget>[
-                    Container(
-                      padding: EdgeInsets.all(18),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(9.6),
-                        color: Color(0x080a928),
-                      ),
-                      // child: Image.asset('assets/image/bungadesa.jpg'),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                height: 210,
-                child: PageView(
-                  physics: BouncingScrollPhysics(),
-                  // controller: _pageController,
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    Container(
-                      child: Stack(
-                        children: <Widget>[
-                          Positioned(
-                              child: ClipRRect(
-                            borderRadius: BorderRadius.circular(4.8),
-                            child: BackdropFilter(
-                              filter:
-                                  ImageFilter.blur(sigmaY: 19.2, sigmaX: 19.2),
-                              child: Container(
-                                height: 169,
-                                padding: EdgeInsets.only(left: 26.72),
-                                alignment: Alignment.centerLeft,
-                                child: Row(
-                                  children: <Widget>[
-                                    Image.asset('assets/image/header.png'),
-                                    SizedBox(width: 5),
-                                    Text(
-                                      "",
-                                      style: GoogleFonts.lato(
-                                          fontWeight: FontWeight.w700,
-                                          color: Colors.white,
-                                          fontSize: 16.8),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ))
-                        ],
-                      ),
-                    ),
-                    Container(
-                      child: Stack(
-                        children: <Widget>[
-                          Positioned(
-                              child: ClipRRect(
-                            borderRadius: BorderRadius.circular(4.8),
-                            child: BackdropFilter(
-                              filter:
-                                  ImageFilter.blur(sigmaY: 19.2, sigmaX: 19.2),
-                              child: Container(
-                                height: 169,
-                                padding: EdgeInsets.only(left: 26.72),
-                                alignment: Alignment.centerLeft,
-                                child: Row(
-                                  children: <Widget>[
-                                    Image.asset('assets/image/c.jpg'),
-                                    SizedBox(width: 5),
-                                    Text(
-                                      "hai",
-                                      style: GoogleFonts.lato(
-                                          fontWeight: FontWeight.w700,
-                                          color: Colors.white,
-                                          fontSize: 16.8),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ))
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              // Container(
+              //   margin: EdgeInsets.only(left: 28.8, right: 28.8),
+              //   child: Row(
+              //     children: <Widget>[
+              //       Container(
+              //         padding: EdgeInsets.only(
+              //             top: 20, right: 80, bottom: 20, left: 80),
+              //         decoration: BoxDecoration(
+              //           borderRadius: BorderRadius.circular(9.6),
+              //           color: Color(0x080a928),
+              //         ),
+              //         // child: Text(
+              //         //   "Selamat Datang",
+              //         //   style: GoogleFonts.lato(
+              //         //       fontWeight: FontWeight.w400,
+              //         //       color: Colors.blue.shade300,
+              //         //       fontSize: 16.8),
+              //         // ),
+              //         // child: Image.asset('assets/image/bungadesa.jpg'),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+
               Container(
                 height: 210,
                 child: PageView(
@@ -160,19 +96,15 @@ class home extends StatelessWidget {
                               filter:
                                   ImageFilter.blur(sigmaY: 19.2, sigmaX: 19.2),
                               child: Container(
-                                height: 169,
-                                padding: EdgeInsets.only(left: 26.72),
-                                alignment: Alignment.centerLeft,
+                                height: 300,
+                                padding: EdgeInsets.only(left: 66.72),
+                                // alignment: Alignment.centerLeft,
                                 child: Row(
                                   children: <Widget>[
-                                    Image.asset('assets/image/c.jpg'),
-                                    SizedBox(width: 5),
-                                    Text(
-                                      "hai",
-                                      style: GoogleFonts.lato(
-                                          fontWeight: FontWeight.w700,
-                                          color: Colors.white,
-                                          fontSize: 16.8),
+                                    Image.asset(
+                                      'assets/image/bg.png',
+                                      scale: .1,
+                                      fit: BoxFit.contain,
                                     ),
                                   ],
                                 ),
@@ -192,12 +124,12 @@ class home extends StatelessWidget {
                               filter:
                                   ImageFilter.blur(sigmaY: 19.2, sigmaX: 19.2),
                               child: Container(
-                                height: 169,
-                                padding: EdgeInsets.only(left: 26.72),
+                                height: 300,
+                                padding: EdgeInsets.only(left: 66.72),
                                 alignment: Alignment.centerLeft,
                                 child: Row(
                                   children: <Widget>[
-                                    Image.asset('assets/image/c.jpg'),
+                                    Image.asset('assets/image/bg.png'),
                                     SizedBox(width: 5),
                                     Text(
                                       "hai",
@@ -205,6 +137,193 @@ class home extends StatelessWidget {
                                           fontWeight: FontWeight.w700,
                                           color: Colors.white,
                                           fontSize: 16.8),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ))
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              // Container(
+              //   height: 210,
+              //   child: PageView(
+              //     physics: BouncingScrollPhysics(),
+              //     // controller: _pageController,
+              //     scrollDirection: Axis.horizontal,
+              //     children: [
+              //       Container(
+              //         child: Stack(
+              //           children: <Widget>[
+              //             Positioned(
+              //                 child: ClipRRect(
+              //               borderRadius: BorderRadius.circular(4.8),
+              //               child: BackdropFilter(
+              //                 filter:
+              //                     ImageFilter.blur(sigmaY: 19.2, sigmaX: 19.2),
+              //                 child: Container(
+              //                   height: 169,
+              //                   padding: EdgeInsets.only(left: 26.72),
+              //                   alignment: Alignment.centerLeft,
+              //                   child: Row(
+              //                     children: <Widget>[
+              //                       Image.asset('assets/image/c.jpg'),
+              //                       SizedBox(width: 5),
+              //                       Text(
+              //                         "hai",
+              //                         style: GoogleFonts.lato(
+              //                             fontWeight: FontWeight.w700,
+              //                             color: Colors.white,
+              //                             fontSize: 16.8),
+              //                       ),
+              //                     ],
+              //                   ),
+              //                 ),
+              //               ),
+              //             ))
+              //           ],
+              //         ),
+              //       ),
+              //       Container(
+              //         child: Stack(
+              //           children: <Widget>[
+              //             Positioned(
+              //                 child: ClipRRect(
+              //               borderRadius: BorderRadius.circular(4.8),
+              //               child: BackdropFilter(
+              //                 filter:
+              //                     ImageFilter.blur(sigmaY: 19.2, sigmaX: 19.2),
+              //                 child: Container(
+              //                   height: 169,
+              //                   padding: EdgeInsets.only(left: 26.72),
+              //                   alignment: Alignment.centerLeft,
+              //                   child: Row(
+              //                     children: <Widget>[
+              //                       Image.asset('assets/image/c.jpg'),
+              //                       SizedBox(width: 5),
+              //                       Text(
+              //                         "hai",
+              //                         style: GoogleFonts.lato(
+              //                             fontWeight: FontWeight.w700,
+              //                             color: Colors.white,
+              //                             fontSize: 16.8),
+              //                       ),
+              //                     ],
+              //                   ),
+              //                 ),
+              //               ),
+              //             ))
+              //           ],
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              Center(
+                  // child: Text("Berbagai Inovasi Tiap OPD"),
+                  ),
+              Container(
+                height: 110,
+                child: PageView(
+                  physics: BouncingScrollPhysics(),
+                  // controller: _pageController,
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    Container(
+                      child: Stack(
+                        children: <Widget>[
+                          Positioned(
+                              child: ClipRRect(
+                            borderRadius: BorderRadius.circular(4.8),
+                            child: BackdropFilter(
+                              filter:
+                                  ImageFilter.blur(sigmaY: 19.2, sigmaX: 19.2),
+                              child: Container(
+                                height: 169,
+                                padding: EdgeInsets.only(left: 40.72),
+                                alignment: Alignment.center,
+                                child: Row(
+                                  children: <Widget>[
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        color: Colors.blue.withOpacity(.2),
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(10.0),
+                                        child: Icon(
+                                          Icons.location_city_outlined,
+                                          color: Colors.blue,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text("   "),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        color: Colors.green.withOpacity(.2),
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(10.0),
+                                        child: Icon(
+                                          Icons.local_florist_outlined,
+                                          color: Colors.green,
+                                        ),
+                                      ),
+                                    ),
+                                    Text("   "),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        color: Colors.red.withOpacity(.2),
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(10.0),
+                                        child: Icon(
+                                          Icons.car_rental,
+                                          color: Colors.red,
+                                        ),
+                                      ),
+                                    ),
+                                    Text("   "),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        color: Colors.purple.withOpacity(.2),
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(10.0),
+                                        child: Icon(
+                                          Icons.home_work,
+                                          color: Colors.purple,
+                                        ),
+                                      ),
+                                    ),
+                                    Text("   "),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        color: Colors.pink.withOpacity(.2),
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(10.0),
+                                        child: Icon(
+                                          Icons.cast_for_education,
+                                          color: Colors.pink,
+                                        ),
+                                      ),
                                     ),
                                   ],
                                 ),

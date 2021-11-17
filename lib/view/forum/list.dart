@@ -18,7 +18,7 @@ class list extends StatefulWidget {
 class _listState extends State<list> {
   @override
   List _list = [];
-
+  var i = 1;
   Future getProducts() async {
     var response = await http.get(Uri.parse("http://10.0.2.2:8000/api/topik"));
     Map<String, dynamic> map = json.decode(response.body);
@@ -32,6 +32,24 @@ class _listState extends State<list> {
     final arguments = ModalRoute.of(context)!.settings.arguments as Map;
     if (arguments != null) print(arguments['kategori']);
     return Scaffold(
+      appBar: AppBar(
+        title: Center(
+          // padding: EdgeInsets.only(right: .2),
+          child: Row(
+            children: [
+              Column(
+                children: [
+                  Text(
+                    arguments['kategori'],
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+        backgroundColor: Colors.blue.shade300,
+      ),
       body: Container(
         padding: const EdgeInsets.only(top: 59, left: 25, right: 24),
         child: FutureBuilder(
@@ -44,18 +62,66 @@ class _listState extends State<list> {
                   children: [
                     if (_list[index]["kategori"]["kategori"] ==
                         arguments['kategori'])
-                      ListTile(
-                        title: Text(_list[index]["judul"]),
-                        onTap: () {
-                          Navigator.pushNamed(
-                            context,
-                            '/topik',
-                            arguments: {
-                              'judultopik': _list[index]["judul"],
-                              'id': (_list[index]["id"])
-                            },
-                          );
-                        },
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.blue.withOpacity(.2),
+                                  borderRadius: BorderRadius.circular(5.0),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(2.0),
+                                ),
+                              ),
+                              // Text(
+                              //   " " + arguments['kategori'],
+                              //   style: TextStyle(
+                              //     color: Colors.black,
+                              //     fontSize: 16,
+                              //   ),
+                              // ),
+                            ],
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                  color: Theme.of(context).primaryColor),
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                            padding: EdgeInsets.only(
+                                bottom: 2, left: 2, right: 2, top: 0.3),
+                            height: 50,
+                            width: 250,
+                            child: ListTile(
+                              title: Row(
+                                children: [
+                                  Icon(
+                                    Icons.screen_search_desktop_outlined,
+                                    color: Colors.blue,
+                                  ),
+                                  Text(
+                                    " " + _list[index]["judul"],
+                                    style: TextStyle(
+                                        color: Colors.blue,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ],
+                              ),
+                              onTap: () {
+                                Navigator.pushNamed(
+                                  context,
+                                  '/topik',
+                                  arguments: {
+                                    'judultopik': _list[index]["judul"],
+                                    'id': (_list[index]["id"])
+                                  },
+                                );
+                              },
+                            ),
+                          ),
+                        ],
                       ),
                   ],
                 );

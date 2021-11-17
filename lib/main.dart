@@ -1,6 +1,5 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-// ignore: implementation_imports
 import 'view/forum/topik.dart';
 import 'view/home.dart';
 import 'view/nav.dart';
