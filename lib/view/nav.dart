@@ -3,7 +3,11 @@ import 'package:custom_line_indicator_bottom_navbar/custom_line_indicator_bottom
 import 'package:flutter/material.dart';
 import 'package:manajemenspbe/view/home.dart';
 import 'package:manajemenspbe/view/forum/forum.dart';
-import 'package:manajemenspbe/view/inovasi.dart';
+import 'package:manajemenspbe/view/inovasi/inovasi.dart';
+import 'package:manajemenspbe/view/inovasi/listKonten.dart';
+import 'package:manajemenspbe/view/inovasi/listKonten2.dart';
+import 'package:manajemenspbe/view/inovasi/listKonten3.dart';
+import 'package:manajemenspbe/view/inovasi/isiInovasi.dart';
 import 'package:manajemenspbe/view/login.dart';
 import 'package:manajemenspbe/view/more.dart';
 import 'package:manajemenspbe/view/profil.dart';
@@ -26,8 +30,12 @@ class nav extends StatelessWidget {
         '/forum': (BuildContext _) => Forum(),
         '/list': (BuildContext _) => list(),
         '/topik': (BuildContext _) => topik(),
-        '/kategori1': (BuildContext _) => kategori1(),
-        '/kategori2': (BuildContext _) => kategori2()
+        '/listKonten': (BuildContext _) => listKonten(),
+        '/listKonten2': (BuildContext _) => listKonten2(),
+        '/listKonten3': (BuildContext _) => listKonten3(),
+        '/isiInovasi': (BuildContext _) => isiInovasi(),
+        // '/kategori1': (BuildContext _) => kategori1(),
+        // '/kategori2': (BuildContext _) => kategori2()
       },
       home: MyExample(),
     );
