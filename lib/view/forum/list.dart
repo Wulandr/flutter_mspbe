@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:manajemenspbe/view/forum/forum.dart';
 import 'package:manajemenspbe/view/forum/topik.dart';
-import 'package:manajemenspbe/view/forum/topik2.dart';
 import 'package:manajemenspbe/view/nav.dart';
 // import 'package:manajemenspbe/view/nav.dart';
 import '../nav.dart';

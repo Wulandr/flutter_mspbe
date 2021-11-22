@@ -14,6 +14,11 @@ class home extends StatelessWidget {
       body: SafeArea(
         child: Container(
           decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage(
+                  "assets/image/bg5.jpg",
+                ),
+                fit: BoxFit.cover),
             gradient:
                 RadialGradient(colors: [Colors.blue.shade100, Colors.white10]),
           ),
@@ -21,7 +26,7 @@ class home extends StatelessWidget {
             physics: BouncingScrollPhysics(),
             children: <Widget>[
               Padding(
-                  padding: EdgeInsets.only(top: 2, left: 29.8),
+                  padding: EdgeInsets.only(top: .2, left: 29.8),
                   child: Row(
                     children: [
                       // Container(
@@ -43,7 +48,6 @@ class home extends StatelessWidget {
                       //     width: 300,
                       //     child: Image.asset('assets/image/header.png'),
                       //     ),
-                      SizedBox(width: 1)
                     ],
                   )
                   // Text(
@@ -80,7 +84,7 @@ class home extends StatelessWidget {
               // ),
 
               Container(
-                height: 210,
+                height: 240,
                 child: PageView(
                   physics: BouncingScrollPhysics(),
                   // controller: _pageController,
@@ -223,119 +227,118 @@ class home extends StatelessWidget {
               //     ],
               //   ),
               // ),
-              Center(
-                  // child: Text("Berbagai Inovasi Tiap OPD"),
-                  ),
-              Container(
-                height: 110,
-                child: PageView(
-                  physics: BouncingScrollPhysics(),
-                  // controller: _pageController,
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    Container(
-                      child: Stack(
-                        children: <Widget>[
-                          Positioned(
-                              child: ClipRRect(
-                            borderRadius: BorderRadius.circular(4.8),
-                            child: BackdropFilter(
-                              filter:
-                                  ImageFilter.blur(sigmaY: 19.2, sigmaX: 19.2),
-                              child: Container(
-                                height: 169,
-                                padding: EdgeInsets.only(left: 40.72),
-                                alignment: Alignment.center,
-                                child: Row(
-                                  children: <Widget>[
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: Colors.blue.withOpacity(.2),
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(10.0),
-                                        child: Icon(
-                                          Icons.location_city_outlined,
-                                          color: Colors.blue,
+
+              for (int i = 1; i < 3; i++)
+                Container(
+                  height: 110,
+                  child: PageView(
+                    physics: BouncingScrollPhysics(),
+                    // controller: _pageController,
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      Container(
+                        child: Stack(
+                          children: <Widget>[
+                            Positioned(
+                                child: ClipRRect(
+                              borderRadius: BorderRadius.circular(4.8),
+                              child: BackdropFilter(
+                                filter: ImageFilter.blur(
+                                    sigmaY: 19.2, sigmaX: 19.2),
+                                child: Container(
+                                  height: 169,
+                                  padding: EdgeInsets.only(left: 40.72),
+                                  alignment: Alignment.center,
+                                  child: Row(
+                                    children: <Widget>[
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.blue.withOpacity(.2),
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(10.0),
+                                          child: Icon(
+                                            Icons.location_city_outlined,
+                                            color: Colors.blue,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Text("   "),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: Colors.green.withOpacity(.2),
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
+                                      SizedBox(
+                                        height: 10,
                                       ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(10.0),
-                                        child: Icon(
-                                          Icons.local_florist_outlined,
-                                          color: Colors.green,
+                                      Text("   "),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.green.withOpacity(.2),
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(10.0),
+                                          child: Icon(
+                                            Icons.local_florist_outlined,
+                                            color: Colors.green,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Text("   "),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: Colors.red.withOpacity(.2),
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(10.0),
-                                        child: Icon(
-                                          Icons.car_rental,
-                                          color: Colors.red,
+                                      Text("   "),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.red.withOpacity(.2),
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(10.0),
+                                          child: Icon(
+                                            Icons.car_rental,
+                                            color: Colors.red,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Text("   "),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: Colors.purple.withOpacity(.2),
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(10.0),
-                                        child: Icon(
-                                          Icons.home_work,
-                                          color: Colors.purple,
+                                      Text("   "),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.purple.withOpacity(.2),
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(10.0),
+                                          child: Icon(
+                                            Icons.home_work,
+                                            color: Colors.purple,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Text("   "),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        color: Colors.pink.withOpacity(.2),
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(10.0),
-                                        child: Icon(
-                                          Icons.cast_for_education,
-                                          color: Colors.pink,
+                                      Text("   "),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.pink.withOpacity(.2),
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(10.0),
+                                          child: Icon(
+                                            Icons.cast_for_education,
+                                            color: Colors.pink,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                          ))
-                        ],
+                            ))
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
             ],
           ),
         ),

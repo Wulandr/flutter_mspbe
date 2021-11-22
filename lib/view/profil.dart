@@ -10,7 +10,6 @@ class profil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[51],
       body: SingleChildScrollView(
         child: Container(
           decoration: BoxDecoration(

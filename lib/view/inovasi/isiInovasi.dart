@@ -78,6 +78,73 @@ class _isiInovasiState extends State<isiInovasi> {
                                           arguments["bidang"])
                                         Column(
                                           children: [
+                                            Row(
+                                              children: [
+                                                Card(
+                                                  color: Colors.amber
+                                                      .withOpacity(.9),
+                                                  child: Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            4.0),
+                                                    child: Text(
+                                                      "Nama OPD",
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 10),
+                                                    ),
+                                                  ),
+                                                ),
+                                                Card(
+                                                  color: Colors.green
+                                                      .withOpacity(.9),
+                                                  child: Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            4.0),
+                                                    child: Text(
+                                                      "Nama Kategori",
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 10),
+                                                    ),
+                                                  ),
+                                                ),
+                                                Card(
+                                                  color: Colors.teal[500],
+                                                  child: Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            4.0),
+                                                    child: Text(
+                                                      "Nama Elemen Smart",
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 10),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              children: [
+                                                Card(
+                                                  color: Colors.red[300],
+                                                  child: Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            4.0),
+                                                    child: Text(
+                                                      _list[index]
+                                                          ["layanan_spbe"],
+                                                      style: TextStyle(
+                                                          color: Colors.white,
+                                                          fontSize: 10),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
                                             Container(
                                               child: Image.network(
                                                 'http://10.0.2.2:8000/api/inovasi/showimage/1',
